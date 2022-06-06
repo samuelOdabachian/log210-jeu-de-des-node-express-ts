@@ -1,0 +1,21 @@
+@startuml
+skinparam style strictuml
+skinparam defaultfontname Verdana
+skinparam sequence {
+    MessageAlign center
+}
+title DSS pour un scénario où l'enseignant retire un cours
+actor ":Teacher" as t
+participant ":Systeme" as s
+t->s : getCourses()
+t<<--s : liste de cours
+t->s : getCourseDetails(courseName: String)
+t<<--s : ID cours, liste d'étudiant inscrit dans le cours
+loop pas confirmé
+    t->s : deleteCourse(courseName : String, ID)
+    t<<--s : demande de confirmation pour supprimer un cours
+    t->s : confirmDelete()
+    
+end loop
+t<<--s : leste de cours
+@enduml

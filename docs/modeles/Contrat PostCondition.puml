@@ -1,0 +1,17 @@
+--Postcondition CU01c
+
+getCourses()
+-aucune postcondition
+
+getCourseDetails(String: courseName)
+-aucune posteCondition
+
+deleteCourse(String: CourseName)
+-aucune postcondition
+
+confirmDelete()
+-Supprimer tous asssociations du goupe cours avec les etuditants
+-Supprimer le groupeCours  
+
+
+
